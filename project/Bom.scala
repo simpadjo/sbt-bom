@@ -127,7 +127,7 @@ object BomReader {
         }
 
         names.flatMap(n => versions.get((org, n))).headOption
-          .getOrElse(sys.error(s"Version for $dependency not found in BOM"))
+          .getOrElse(sys.error(s"Version for ${org}.${name} not found in BOM"))
       }
     }
   }
